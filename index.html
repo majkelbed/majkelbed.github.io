@@ -6,60 +6,138 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Bulid your website with me</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="css/main.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+        integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="./gliderlib/glider.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/main.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="./gliderlib/glider.js"></script>
     <script src="main.js"></script>
 </head>
 
 <body>
-    <div class="main">
+    <div class="container">
+        <nav class="nav nav--top">
+            <ul class="nav_links">
+                <button class="nav_link--menu"></button>
+                <li class="nav_link"><i class="fab fa-facebook-messenger"></i></li>
+                <li class="nav_link"><i class="fab fa-linkedin"></i></li>
+                <li class="nav_link"><i class="fab fa-github"></i></li>
+
+            </ul>
+        </nav>
+        <nav class="nav nav--mobile">
+            <ul class="nav_links nav_links--mobile">
+                <li class="nav_link">początek</li>
+                <li class="nav_link">moje prace</li>
+                <li class="nav_link">o mnie</li>
+                <li class="nav_link">kontakt</li>
+            </ul>
+        </nav>
+        <nav class="nav nav--side">
+            <ul class="nav_links nav_links--side">
+                <li class="nav_link">początek</li>
+                <li class="nav_link">moje prace</li>
+                <li class="nav_link">o mnie</li>
+                <li class="nav_link">kontakt</li>
+            </ul>
+        </nav>
         <header class="hero">
-            <nav class="menu"></nav>
-            <h1>Hello, how can I help you?</h1>
+            <div class="hero_info">
+                <h1 class="hero_info--title title">Potrzebujesz strony? <br> Dobrze trafiłeś!</h1>
+                <p class="hero_info--description description">Zajmuję się tworzeniem stron internetowych na zamówienie
+                </p>
+                <button title="moje prace" class="hero_callToAction button button--main">
+                    <div class="button_content">moje prace</div>
+                    <div class="button_border"></div>
+                </button>
+            </div>
+
         </header>
-
-        <h2 class="herosection"></h2>
         <section class="about">
-            <img src="./img/ilustration.png" alt="" class="about-img">
-            <div class="info"></div>
+            <div class="about_info">
+                <h2 class="about_info--title title">Kilka słów o mnie</h2>
+                <p class="about_info--description description">Nazywam się Michał, jestem studentem AGH na kierunku
+                    informatyka, mam
+                    22 lata i zajmuję się
+                    tworzeniem
+                    stron internetowych.<br></p>
+                <p class="about_info--description description">Najbardziej interesuje mnie proces tworzenia, jak coś
+                    jest zbudowane
+                    i jak działa. Interesuję się
+                    filmami, a najbardziej montażem, doceniam także dobrą fotografię. <br></p>
+                <p class="about_info--description description">W wolnym czasie najczęściej zajmuję się rozwojem
+                    fizycznym bądź
+                    lekturą fantastyki.
+                </p>
+            </div>
+            <img class="about_img" src="./img/arif-riyanto-1355921-unsplash.png" alt="" class="about_img">
         </section>
-
         <section class="work">
-            <div>
-                <img src="" alt="" class="logo">
-                <div class="work-info">
-                    <h2></h2>
-                    <p></p>
-                    <button class="button-secondary">go github</button><button class="button-secondary">go
-                        github</button>
+            <h2 class="work_title">moje prace</h2>
+            <div class="glider-contain">
+                <div class="work_glider">
+                    <div class="content">
+                        <h2>Restaurant</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laudantium, cum?</p>
+                        <div class="tech">
+                            <h2>Użyte technologie:</h2>
+                            <img class="icon" src="./img/icons/sass.svg" alt="">
+                            <img class="icon" src="./img/icons/js.svg" alt="">
+                            <img class="icon" src="./img/icons/css-3.svg" alt="">
+                            <img class="icon" src="./img/icons/Group 48.svg" alt="">
+                        </div>
+                        <img class="source" src="./img/icons/eye.svg" alt="">
+                        <img class="source" src="./img/icons/eye-1.svg" alt="">
+                    </div>
+                    <div class="content">
+                        <h2>Restaurant</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laudantium, cum?</p>
+                        <div class="tech">
+                            <h2>Użyte technologie:</h2>
+                            <img class="icon" src="./img/icons/sass.svg" alt="">
+                            <img class="icon" src="./img/icons/js.svg" alt="">
+                            <img class="icon" src="./img/icons/css-3.svg" alt="">
+                            <img class="icon" src="./img/icons/Group 48.svg" alt="">
+                        </div>
+                        <img class="source" src="./img/icons/eye.svg" alt="">
+                        <img class="source" src="./img/icons/eye-1.svg" alt="">
+                    </div>
+                    <div class="content">
+                        <h2>Restaurant</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laudantium, cum?</p>
+                        <div class="tech">
+                            <h2>Użyte technologie:</h2>
+                            <img class="icon" src="./img/icons/sass.svg" alt="">
+                            <img class="icon" src="./img/icons/js.svg" alt="">
+                            <img class="icon" src="./img/icons/css-3.svg" alt="">
+                            <img class="icon" src="./img/icons/Group 48.svg" alt="">
+                        </div>
+                        <img class="source" src="./img/icons/eye.svg" alt="">
+                        <img class="source" src="./img/icons/eye-1.svg" alt="">
+                    </div>
                 </div>
-            </div>
-            <div>
-                <img src="" alt="" class="logo">
-                <div class="work-info">
-                    <h2></h2>
-                    <p></p>
-                    <button class="button-secondary">go github</button><button class="button-secondary">go
-                        github</button>
-                </div>
-            </div>
-            <div>
-                <img src="" alt="" class="logo">
-                <div class="work-info">
-                    <h2></h2>
-                    <p></p>
-                    <button class="button-secondary">go github</button><button class="button-secondary">go
-                        github</button>
-                </div>
+                <button role="button" aria-label="Previous" class="glider-prev"></button>
+                <button role="button" aria-label="Next" class="glider-next"></button>
+                <div role="tablist" class="dots"></div>
             </div>
         </section>
-
-        <footer class="footer">
-            <footer-info>
-                <button class="link">github</button>
-                <button class="link">github</button>
-                <button class="link">github</button>
-            </footer-info>
-        </footer>
+        <section class="contact">
+            <h2 class="contact_title">Zainteresowany? <br> Skontaktuj się <br> ze mną!</h2>
+            <form action="" class="contactForm">
+                <input type="text" class="contactForm_input" placeholder="email">
+                <input type="text" class="contactForm_input" placeholder="wiadomość">
+                <button title="wyślij" class="button button--main contactForm_button">
+                    <div class="button_content">wyślij</div>
+                    <div class="button_border"></div>
+                </button>
+            </form>
+            <ul class="contact_links">
+                <li class="contact_link"><i class="fab fa-facebook-messenger"></i> messenger</li>
+                <li class="contact_link"><i class="fab fa-linkedin"></i> linkedin</li>
+                <li class="contact_link"><i class="fab fa-github"></i> github</li>
+            </ul>
+        </section>
     </div>
 </body>
 

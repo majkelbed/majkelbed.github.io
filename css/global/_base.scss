@@ -1,0 +1,13 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    padding: 0;
+    margin:0;
+    background-color: $bg;
+    color:$text;
+    overflow-x: hidden;
+}
+
+@include padding(0 1.5rem);
