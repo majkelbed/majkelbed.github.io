@@ -21,6 +21,7 @@ window.onload = () => {
     new Glider(document.querySelector('.work_glider'), {
         slidesToShow: 1,
         dots: '.dots',
+        scrollLock: true,
         arrows: {
             prev: '.glider-prev',
             next: '.glider-next'

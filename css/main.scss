@@ -86,6 +86,20 @@
     
     &--side{
         display: none;
+        
+    }
+    &_a{
+        text-decoration: none;
+        color: $text--secondary;
+        &:hover{
+            color: $action;
+        }
+        &.current{
+            color: $text;
+            &:hover{
+                color: $action;
+            }
+        }
     }
 }
 
@@ -327,7 +341,7 @@
     @include padding(1.5rem 15vw 1.5rem 2.5rem);
 
     .hero{
-        height: 100vh;
+        min-height: 100vh;
         display: block;
         &_info{
             display: block;
@@ -427,7 +441,7 @@
     }
 
     .work{
-        height: 100vh;
+        min-height: 100vh;
         &_title{
             @include fontSize(3vw);
         }

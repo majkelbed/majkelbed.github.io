@@ -36,25 +36,25 @@
         </nav>
         <nav class="nav nav--side">
             <ul class="nav_links nav_links--side">
-                <li class="nav_link">początek</li>
-                <li class="nav_link">moje prace</li>
-                <li class="nav_link">o mnie</li>
-                <li class="nav_link">kontakt</li>
+                <li class="nav_link"><a class="nav_a current" href="#hero">początek</a></li>
+                <li class="nav_link"><a class="nav_a" href="#about">o mnie</a></li>
+                <li class="nav_link"><a class="nav_a" href="#work">moje prace</a></li>
+                <li class="nav_link"><a class="nav_a" href="#contact">kontakt</a></li>
             </ul>
         </nav>
-        <header class="hero">
+        <header class="hero" id="hero">
             <div class="hero_info">
                 <h1 class="hero_info--title title">Potrzebujesz strony? <br> Dobrze trafiłeś!</h1>
                 <p class="hero_info--description description">Zajmuję się tworzeniem stron internetowych na zamówienie
                 </p>
-                <button title="moje prace" class="hero_callToAction button button--main">
+                <a href="#work" title="moje prace" class="hero_callToAction button button--main">
                     <div class="button_content">moje prace</div>
                     <div class="button_border"></div>
-                </button>
+                </a>
             </div>
 
         </header>
-        <section class="about">
+        <section class="about" id="about">
             <div class="about_info">
                 <h2 class="about_info--title title">Kilka słów o mnie</h2>
                 <p class="about_info--description description">Nazywam się Michał, jestem studentem AGH na kierunku
@@ -73,13 +73,13 @@
             </div>
             <img class="about_img" src="./img/arif-riyanto-1355921-unsplash.png" alt="" class="about_img">
         </section>
-        <section class="work">
+        <section class="work" id="work">
             <h2 class="work_title">moje prace</h2>
             <div class="glider-contain">
                 <div class="work_glider">
                     <div class="content">
-                        <h2>Restaurant</h2>
-                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laudantium, cum?</p>
+                        <h2>Star Wars</h2>
+                        <p>Strona oparta na SWAPI z Twoimi ulubionymi postaciami z Gwieznych Wojen!</p>
                         <div class="tech">
                             <h2>Użyte technologie:</h2>
                             <img class="icon" src="./img/icons/sass.svg" alt="">
@@ -87,7 +87,8 @@
                             <img class="icon" src="./img/icons/css-3.svg" alt="">
                             <img class="icon" src="./img/icons/Group 48.svg" alt="">
                         </div>
-                        <img class="source" src="./img/icons/eye.svg" alt="">
+                        <a href="https://majkelbed.github.io/SWCharacters/"><img class="source"
+                                src="./img/icons/eye.svg" alt=""></a>
                         <img class="source" src="./img/icons/eye-1.svg" alt="">
                     </div>
                     <div class="content">
@@ -122,7 +123,7 @@
                 <div role="tablist" class="dots"></div>
             </div>
         </section>
-        <section class="contact">
+        <section class="contact" id="contact">
             <h2 class="contact_title">Zainteresowany? <br> Skontaktuj się <br> ze mną!</h2>
             <form action="" class="contactForm">
                 <input type="text" class="contactForm_input" placeholder="email">
