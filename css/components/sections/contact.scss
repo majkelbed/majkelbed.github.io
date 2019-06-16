@@ -1,0 +1,73 @@
+.contact{
+    &_title{
+        font-size: 28px;
+    }
+    .contactForm{
+        &_input{
+            background:none;
+            color:$text;
+            border:none;
+            border-bottom: 3px solid $light;
+            width: 100%;
+            padding: 10px 0.2rem;
+            @include font(500);
+            @include fontSize(30px);
+
+            &::placeholder{
+                @include font(700);
+                font-size: 20px;
+                color:$text;
+                opacity: 1;
+            }
+        }
+
+        &_button{
+            margin:1.3rem 10px;
+            width: 90px;
+        }
+        
+    }
+    &_links{
+        display: none;
+        list-style: none;
+        padding: 0;
+    }
+    &_link{
+        @include fontSize(4.1vw);
+        padding: 0 2vw;
+    }
+}
+
+@media screen and (min-width:480px){}
+
+@media screen and (min-width:700px){
+    .contactForm{
+        &_input{
+            padding: 20px 0.2rem;
+        }
+    }
+}
+
+@media(min-width:1224px){
+    .contact{
+        &_title{
+            @include fontSize(5vw);
+        }
+        .contactForm{
+            &_input{
+                padding:2vw 1rem;
+            }
+            &_input::placeholder{
+                @include fontSize(2.5vw);
+            }
+            &_button{
+                width: 10vw;
+                height: 4vw;
+                margin:2.5vw 10px;
+            }
+        }
+        &_links{
+            display: flex;
+        }
+    }
+}

@@ -1,0 +1,73 @@
+.hero{
+    &_info{
+        &--description{
+            color:$text--secondary;
+            font-size:20px;
+        }
+    }
+}
+
+@media screen and (min-width:480px){}
+
+@media screen and (min-width:700px){
+    .hero{
+        background:url(../img/bg-shape.svg) no-repeat;
+        background-size: cover;
+        display: flex;
+        align-items: center;
+
+            &_info{
+                display: grid;
+                grid-template-columns: 3fr 1fr;
+                grid-template-areas:
+                "title space"
+                "desc button";
+
+                &--title{
+                    grid-area: title;
+                    font-size:35px;
+                    line-height: 38px;
+                }
+                &--description{
+                    width: 70%;
+                    grid-area: desc;
+                    font-size: 25px;
+                    line-height: 27px;
+                }
+            }
+
+        
+        &_callToAction{
+            grid-area: button;
+            align-self: center;
+            width: 150px;
+            height: 50px;
+        }
+    }
+}
+
+@media(min-width:1224px){
+    .hero{
+        min-height: 100vh;
+        display: block;
+        &_info{
+            display: block;
+            position: relative;
+            &--title{
+                @include fontSize(7.3vw);
+            }
+            &--description{
+                width: 35vw;
+                @include fontSize(3.7vw);
+            }
+        }
+        &_callToAction{
+            position: absolute;
+            width: 16vw;
+            height: 6vw;
+            bottom: -25px;
+            left: 42vw;
+            @include fontSize(1.7vw);
+        }
+    }
+}
