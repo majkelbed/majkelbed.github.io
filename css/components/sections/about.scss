@@ -53,6 +53,7 @@
 
 @media(min-width:1224px){
     .about{
+        min-height: 80vh;
         &_info{
             @include fontSize(2vw);
             &--description{
@@ -60,7 +61,7 @@
             }
         }
         &_img{
-            flex:1;
+            flex:2;
         }
     }
 }

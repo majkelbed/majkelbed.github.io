@@ -2,6 +2,26 @@
     &_title{
         font-size: 28px;
     }
+    &_formInProgress{
+        display: none;
+        position: absolute;
+        z-index: 10;
+        top:0;
+        left:0;
+        height: 100vh;
+        width: 100%;
+        background-color: black;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        &Exit{
+            color:red;
+            font-size: 30px;
+            cursor: pointer;
+            background: transparent;
+            border:none;
+        }
+    }
     .contactForm{
         &_input{
             background:none;
@@ -34,7 +54,7 @@
     }
     &_link{
         @include fontSize(4.1vw);
-        padding: 0 2vw;
+        margin: 0 2vw;
     }
 }
 
@@ -68,6 +88,11 @@
         }
         &_links{
             display: flex;
+
+        }
+        &_link,:visited{
+            text-decoration: none;
+            color:$text;
         }
     }
 }

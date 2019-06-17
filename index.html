@@ -10,6 +10,7 @@
         integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="./gliderlib/glider.css">
     <link rel="stylesheet" type="text/css" media="screen" href="css/main.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
     <script src="./gliderlib/glider.js"></script>
     <script src="main.js"></script>
@@ -20,26 +21,29 @@
         <nav class="nav nav--top">
             <ul class="nav_links">
                 <button class="nav_link--menu"></button>
-                <li class="nav_link"><i class="fab fa-facebook-messenger"></i></li>
-                <li class="nav_link"><i class="fab fa-linkedin"></i></li>
-                <li class="nav_link"><i class="fab fa-github"></i></li>
+                <a href="https://www.facebook.com/messages/t/MichallBednarczyk" class="contact_link"><i
+                        class="fab fa-facebook-messenger"></i></a>
+                <a href="https://www.linkedin.com/in/michał-bednarczyk-73a392185" class="contact_link"><i
+                        class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/majkelbed" class="contact_link"><i class="fab fa-github"></i></a>
 
             </ul>
         </nav>
         <nav class="nav nav--mobile">
             <ul class="nav_links nav_links--mobile">
-                <li class="nav_link">początek</li>
-                <li class="nav_link">moje prace</li>
-                <li class="nav_link">o mnie</li>
-                <li class="nav_link">kontakt</li>
+                <a class="nav_link nav_a current" href="#hero">początek</a>
+                <a class="nav_link nav_a" href="#about">o mnie</a>
+                <a class="nav_link nav_a" href="#work">moje prace</a>
+                <a class="nav_link nav_a" href="#contact">kontakt</a>
             </ul>
         </nav>
         <nav class="nav nav--side">
             <ul class="nav_links nav_links--side">
-                <li class="nav_link"><a class="nav_a current" href="#hero">początek</a></li>
+                <li class="nav_link"><a class="nav_a" href="#hero">początek</a></li>
                 <li class="nav_link"><a class="nav_a" href="#about">o mnie</a></li>
                 <li class="nav_link"><a class="nav_a" href="#work">moje prace</a></li>
                 <li class="nav_link"><a class="nav_a" href="#contact">kontakt</a></li>
+                <span class="nav_currentLink"></span>
             </ul>
         </nav>
         <header class="hero sec" id="hero">
@@ -52,7 +56,9 @@
                     <div class="button_border"></div>
                 </a>
             </div>
-
+            <span class="hero_scrollIndicator">
+                <span class="hero_scrollIndicatorBall"></span>
+            </span>
         </header>
         <section class="about sec" id="about">
             <div class="about_info">
@@ -128,16 +134,23 @@
             <form action="" class="contactForm">
                 <input type="text" class="contactForm_input" placeholder="email">
                 <input type="text" class="contactForm_input" placeholder="wiadomość">
-                <button title="wyślij" class="button button--main contactForm_button">
+                <button type="button" title="wyślij" class="button button--main contactForm_button">
                     <div class="button_content">wyślij</div>
                     <div class="button_border"></div>
                 </button>
             </form>
+            <div class="contact_formInProgress">
+                <h2>Przepraszamy, prace trwają!</h2>
+                <p>Inne formy kontatu znajdują się poniżej</p>
+                <button type="button" class="contact_formInProgressExit">X</button>
+            </div>
             <ul class="contact_links">
-                <li class="contact_link"><a class="contact_a" href=""></a><i class="fab fa-facebook-messenger"></i>
-                    messenger</a></li>
-                <li class="contact_link"><i class="fab fa-linkedin"></i> linkedin</li>
-                <li class="contact_link"><i class="fab fa-github"></i> github</li>
+                <a href="https://www.facebook.com/messages/t/MichallBednarczyk" class="contact_link"><i
+                        class="fab fa-facebook-messenger"></i>
+                    messenger</a>
+                <a href="https://www.linkedin.com/in/michał-bednarczyk-73a392185" class="contact_link"><i
+                        class="fab fa-linkedin"></i> linkedin</a>
+                <a href="https://github.com/majkelbed" class="contact_link"><i class="fab fa-github"></i> github</a>
             </ul>
         </section>
     </div>

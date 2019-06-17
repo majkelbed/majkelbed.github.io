@@ -17,22 +17,12 @@
         align-items: center;
 
             &_info{
-                display: grid;
-                grid-template-columns: 3fr 1fr;
-                grid-template-areas:
-                "title space"
-                "desc button";
-
                 &--title{
-                    grid-area: title;
-                    font-size:35px;
-                    line-height: 38px;
+                    @include fontSize(5vw);
                 }
                 &--description{
                     width: 70%;
-                    grid-area: desc;
-                    font-size: 25px;
-                    line-height: 27px;
+                    @include fontSize(4vw);
                 }
             }
 
@@ -49,7 +39,8 @@
 @media(min-width:1224px){
     .hero{
         min-height: 100vh;
-        display: block;
+        display: flex;
+        margin:auto 0;
         &_info{
             display: block;
             position: relative;
@@ -65,9 +56,40 @@
             position: absolute;
             width: 16vw;
             height: 6vw;
-            bottom: -25px;
+            bottom: -2vw;
             left: 42vw;
             @include fontSize(1.7vw);
         }
+    &_scrollIndicator{
+        border-radius: 200px 200px 200px 200px;
+        display: block;
+        border: 3px solid $action;
+        height: 50px;
+        width: 24px;
+        position: absolute;
+        bottom: 1vw;
+        right: 50vw;
+
+        &Ball{
+            border-radius: 200px 200px 200px 200px;
+            display: block;
+            height: 15px;
+            width: 15px;
+            position: relative;
+            top:0;
+            left:2px;
+            background-color: $action--light; 
+            animation: slideDown 2s infinite;
+
+            @keyframes slideDown{
+                0%{
+                    top:0;
+                }
+                50%,100%{
+                    top:65%;
+                }
+            }
+        }
+    }
     }
 }

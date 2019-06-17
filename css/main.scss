@@ -6,7 +6,7 @@
 @import './components/sections/work.scss';
 @import './components/sections/contact.scss';
 
- 
+                        
 
 .nav{    
     background:linear-gradient(to top, $mid 0%, $dark 100%);
@@ -27,12 +27,12 @@
         margin-right: auto;
         cursor: pointer;
         height: 24px;
-        width: 24px;
+        width: 24px;   
         background: none;
         border: none;
         padding: 0;
   
-        
+    
 
         &:before,
         &:after{
@@ -57,12 +57,11 @@
             transform: rotate(45deg) translate(0,0);
         }
     }
-    &_link{
-       font-weight: 500;
-       margin-left:1rem;
+    .contact_link,.contact_link:active{
        cursor: pointer;
+       color:$text;
     }
-
+              
 
     // Mobile menu
 
@@ -90,9 +89,10 @@
     
     &--side{
         display: none;
-        
     }
-    &_a,&_a:visited{
+
+    &_a,&_a:visited{       
+        @include fontSize(20px);
         text-decoration: none;
         color: $text--secondary;
         transition: color 0.3s;
@@ -103,17 +103,7 @@
         &.current{
             color: $text;
             position: relative;
-            
-            &::after{
-                content: '';
-                display: block;
-                position: absolute;
-                right:-15px;
-                top:5px;
-                height: 25px;
-                width: 10px;
-                background-color: $action--light;
-            }
+            @include fontSize(30px);
             &:hover{
                 color: $action;
             }
@@ -124,14 +114,14 @@
 
 
 @media screen and (min-width:480px){
-    .nav{
+    .nav{        
         font-size:21px;
         &--mobile{
             .nav_link{
                 padding: 1.5rem 0;
             }
-        }
-    }
+        }     
+    }       
 
     
 
@@ -142,7 +132,7 @@
     @include padding(1.5rem 2.5rem);
 
     .nav{
-        padding: 0 2.5rem;
+        padding: 0 2.5rem;         
         &--mobile{
             .nav_link{
                 padding: 3rem 0;
@@ -151,7 +141,7 @@
     }
     
 }
-
+  
 @media(min-width:1224px){
     @include padding(1.5rem 15vw 1.5rem 2.5rem);
 
@@ -161,10 +151,21 @@
         }
 
         &_link--menu{
-            display: none;
+            display: none;  
         }
     &--mobile{
         display: none;
+    }
+
+    &_currentLink{
+            display: block;
+            position: absolute;
+            top:35px;
+            right: 15px;
+            height: 25px;
+            width: 10px;
+            background-color: $action--light;
+            transition: top 0.3s;
     }
     
     &--side{
@@ -174,12 +175,13 @@
         max-width:15vw;
         height: 100vh; 
         right: 0;
-        align-items: flex-end;
+        align-items: center;
         justify-content: flex-end;
         padding: 0;
         @include fontSize(2vw);
     }
     &_links--side{
+        position: relative;
         display: flex;
         flex-direction: column;
         min-width: 250px;
